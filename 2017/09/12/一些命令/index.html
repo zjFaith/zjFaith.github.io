@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="Bash命令shell（壳） shell其实它是用户和操作系统内核之间的一个纽带(桥梁) 用户操作shell，shell操作操作系统内核，操作系统内核操作计算机硬件   shell的种类： 命令行shell windows:cmd powershell max os ：终端(terminal) linux：sh、bash   图形化shell windows操作系统 osx linux–&amp;gt;u">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2017/09/12/一些命令/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Bash命令shell（壳） shell其实它是用户和操作系统内核之间的一个纽带(桥梁) 用户操作shell，shell操作操作系统内核，操作系统内核操作计算机硬件   shell的种类： 命令行shell windows:cmd powershell max os ：终端(terminal) linux：sh、bash   图形化shell windows操作系统 osx linux–&amp;gt;u">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-09-05T07:03:47.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="Bash命令shell（壳） shell其实它是用户和操作系统内核之间的一个纽带(桥梁) 用户操作shell，shell操作操作系统内核，操作系统内核操作计算机硬件   shell的种类： 命令行shell windows:cmd powershell max os ：终端(terminal) linux：sh、bash   图形化shell windows操作系统 osx linux–&amp;gt;u">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/09/12/一些命令/"/>
+
+
+
+
+
+  <title> | Hexo</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/12/一些命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="道可道">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/dao.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline"></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-12T01:39:29+08:00">
+                2017-09-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Bash命令"><a href="#Bash命令" class="headerlink" title="Bash命令"></a>Bash命令</h1><h2 id="shell（壳）"><a href="#shell（壳）" class="headerlink" title="shell（壳）"></a>shell（壳）</h2><ul>
+<li>shell其实它是用户和操作系统内核之间的一个纽带(桥梁)<ul>
+<li>用户操作shell，shell操作操作系统内核，操作系统内核操作计算机硬件</li>
+</ul>
+</li>
+<li>shell的种类：<ul>
+<li>命令行shell<ul>
+<li>windows:cmd powershell</li>
+<li>max os ：终端(terminal)</li>
+<li>linux：sh、bash</li>
+</ul>
+</li>
+<li>图形化shell<ul>
+<li>windows操作系统</li>
+<li>osx</li>
+<li>linux–&gt;ubuntu</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="pwd-print-working-directory-：打印出当前目录-文件夹-路径的全名称"><a href="#pwd-print-working-directory-：打印出当前目录-文件夹-路径的全名称" class="headerlink" title="pwd(print working directory)：打印出当前目录(文件夹)路径的全名称"></a>pwd(print working directory)：打印出<code>当前目录</code>(文件夹)路径的全名称</h2><p>当前位于桌面：c:/users/用户名/desktop</p>
+<h2 id="bash命令基本格式"><a href="#bash命令基本格式" class="headerlink" title="bash命令基本格式"></a>bash命令基本格式</h2><ul>
+<li>命令名称 命令参数 命令选项   or  命令名称 命令选项 命令参数</li>
+<li>ls      ./test/  -a             ls     -a     ./test/</li>
+</ul>
+<h2 id="ls-list-："><a href="#ls-list-：" class="headerlink" title="ls(list)："></a>ls(list)：</h2><ul>
+<li><p>列举出当前目录（文件夹）下面的所有的直接子文件和子文件夹</p>
+<ul>
+<li>列举出来的文件夹名称有/结尾的，但是文件没有/结尾的</li>
+</ul>
+</li>
+<li><p>ls可以列举任意目录下面的所有的子文件和文件夹</p>
+</li>
+<li><p>ls 文件夹名称 -a  或者  ls 文件夹名称 –all</p>
+<ul>
+<li>将不会忽略以.开头的文件或者文件夹</li>
+</ul>
+</li>
+<li><p>ls -l ：列举出来的文件和文件夹包含了文件的创建者/创建时间等信息</p>
+</li>
+<li><p>2个选项/多个选项混合使用：</p>
+<ul>
+<li>ls -al === ls -la ：兼具了-a 和-l 的功能</li>
+</ul>
+</li>
+</ul>
+<p>a、当前：/c/Users/Wilbert/Desktop<br>    希望查看c:/hydra文件夹下面有哪些内容：ls ../../../hydra</p>
+<p>b、当前：c:/users/wilbert/desktop<br>    希望查看当前文件夹下面的SZ7/01-Canvas第1天-认识canvas标签-坐标-绘制直线-矩形-线条颜色-路径-开辟路径-闭合路径-线宽-虚线-跑马灯-折线图/3-视频 这个目录中有哪些子文件和文件夹<br>    ls SZ7/01-Canvas第1天-认识canvas标签-坐标-绘制直线-矩形-线条颜色-路径-开辟路径-闭合路径-线宽-虚线-跑马灯-折线图/3-视频</p>
+<h2 id="和"><a href="#和" class="headerlink" title=".和.."></a>.和..</h2><p>.  或者 ./    表示当前目录<br>.. 或者 ../   表示上级目录</p>
+<h2 id="cd-change-directory-切换当前位于的文件夹"><a href="#cd-change-directory-切换当前位于的文件夹" class="headerlink" title="cd(change directory) 切换当前位于的文件夹"></a>cd(change directory) 切换当前位于的文件夹</h2><ul>
+<li>命令格式：cd 文件夹路径<ul>
+<li>切换文件夹之后，最好使用pwd检测当前的文件夹是否发生了变化</li>
+</ul>
+</li>
+</ul>
+<h2 id="mkdir-make-dirctory-：创建文件夹"><a href="#mkdir-make-dirctory-：创建文件夹" class="headerlink" title="mkdir(make dirctory)：创建文件夹"></a>mkdir(make dirctory)：创建文件夹</h2><h3 id="语法格式：mkdir-文件夹名称"><a href="#语法格式：mkdir-文件夹名称" class="headerlink" title="语法格式：mkdir 文件夹名称"></a>语法格式：mkdir 文件夹名称</h3><ul>
+<li>默认情况下，只能在当前目录下面创建文件夹</li>
+<li>可以连续创建多个文件夹：mkdir 文件夹1 文件夹2 文件夹3</li>
+<li>也可以在指定目录下面创建文件夹：mkdir 指定的文件夹路径/新文件夹名称<pre><code>--&gt;要确保指定的文件夹路径存在
+</code></pre></li>
+</ul>
+<p>默认情况下，如果执行命令：mkdir app/css</p>
+<pre><code>- 只有当app存在的时候才能创建css文件夹；如果不存在就会创建失败
+- 如果一定要实现在app本身就不存在的时候创建css,就需要通过以下方式：
+        - mkdir app/css -p：首先创建app，然后创建css
+</code></pre><p>mkdir 目录1/目录2/目录3 -p<br>    –&gt;可以连续创建多级目录，哪怕目录1/目录2都不存在,如果某个目录不存在，先创建该目录，再创建子目录</p>
+<h2 id="删除文件夹：rmdir-remove-directory-：只能删除空文件夹"><a href="#删除文件夹：rmdir-remove-directory-：只能删除空文件夹" class="headerlink" title="删除文件夹：rmdir(remove directory)：只能删除空文件夹"></a>删除文件夹：rmdir(remove directory)：只能删除空文件夹</h2><h2 id="☆☆☆慎用☆☆☆-rm-rf-递归删除指定的文件-文件夹"><a href="#☆☆☆慎用☆☆☆-rm-rf-递归删除指定的文件-文件夹" class="headerlink" title="(☆☆☆慎用☆☆☆)rm -rf 递归删除指定的文件/文件夹"></a>(☆☆☆慎用☆☆☆)rm -rf 递归删除指定的文件/文件夹</h2><h3 id="rm是删除文件"><a href="#rm是删除文件" class="headerlink" title="rm是删除文件"></a>rm是删除文件</h3><ul>
+<li>语法格式：rm 文件路径<ul>
+<li>如果删除的文件路径不存在，那么会报错</li>
+</ul>
+</li>
+<li>不能删除自身，也不能删除父目录（不能含有.和..）</li>
+</ul>
+<h3 id="rm-f-如果说要删除的文件、文件夹不存在，不会显示错误信息"><a href="#rm-f-如果说要删除的文件、文件夹不存在，不会显示错误信息" class="headerlink" title="rm -f 如果说要删除的文件、文件夹不存在，不会显示错误信息"></a>rm -f 如果说要删除的文件、文件夹不存在，不会显示错误信息</h3><h3 id="rm-r-递归删除-常用于删除空文件夹-非空文件夹"><a href="#rm-r-递归删除-常用于删除空文件夹-非空文件夹" class="headerlink" title="rm -r 递归删除(常用于删除空文件夹/非空文件夹)"></a>rm -r 递归删除(常用于删除空文件夹/非空文件夹)</h3><h2 id="创建文件"><a href="#创建文件" class="headerlink" title="创建文件"></a>创建文件</h2><h3 id="语法格式：touch-含有后缀的文件名"><a href="#语法格式：touch-含有后缀的文件名" class="headerlink" title="语法格式：touch 含有后缀的文件名"></a>语法格式：touch 含有后缀的文件名</h3><p>默认是在当前目录下面创建指定的文件<br>    连续的在当前目录下面创建多个文件<br>        touch 1.js 2.txt 3.css 4.html 5.docx</p>
+<p>touch 文件夹/文件名：在指定文件夹下面创建指定的文件<br>    touch app/js/1.js app/css/1.css</p>
+<h2 id="cp-copy-：复制指定的文件-文件夹"><a href="#cp-copy-：复制指定的文件-文件夹" class="headerlink" title="cp(copy)：复制指定的文件/文件夹"></a>cp(copy)：复制指定的文件/文件夹</h2><h3 id="语法格式：cp-源文件的路径-文件夹-文件名-目标文件的路径-文件夹"><a href="#语法格式：cp-源文件的路径-文件夹-文件名-目标文件的路径-文件夹" class="headerlink" title="语法格式：cp 源文件的路径(文件夹+文件名) 目标文件的路径(文件夹)"></a>语法格式：cp 源文件的路径(文件夹+文件名) 目标文件的路径(文件夹)</h3><ul>
+<li><p>把一个文件复制到指定文件夹下面<br>  cp ./1.txt ./app/</p>
+</li>
+<li><p>把一个文件复制到当前文件夹下面并且重命名<br>  cp ./1.txt  ./12.txt</p>
+</li>
+<li><p>把一个文件复制到指定文件夹下面并且重命名<br>  cp ./1.txt ./app/13.txt</p>
+</li>
+</ul>
+<h3 id="复制文件夹：cp-源文件夹路径-新文件夹路径-r"><a href="#复制文件夹：cp-源文件夹路径-新文件夹路径-r" class="headerlink" title="复制文件夹：cp 源文件夹路径   新文件夹路径  -r"></a>复制文件夹：cp 源文件夹路径   新文件夹路径  -r</h3><ul>
+<li>-r 递归</li>
+</ul>
+<h2 id="mv-move-：移动文件-剪切-粘贴-–-gt-ctrl-x-ctrl-v"><a href="#mv-move-：移动文件-剪切-粘贴-–-gt-ctrl-x-ctrl-v" class="headerlink" title="mv(move)：移动文件(剪切+粘贴)–&gt;ctrl x +ctrl v"></a>mv(move)：移动文件(剪切+粘贴)–&gt;ctrl x +ctrl v</h2><h3 id="语法格式：mv-源文件的路径-文件夹-文件名-新文件的路径-文件夹"><a href="#语法格式：mv-源文件的路径-文件夹-文件名-新文件的路径-文件夹" class="headerlink" title="语法格式：mv 源文件的路径(文件夹+文件名) 新文件的路径(文件夹)"></a>语法格式：mv 源文件的路径(文件夹+文件名) 新文件的路径(文件夹)</h3><h3 id="移动并重命名：mv-源文件的路径-文件夹-文件名-新文件的路径-文件夹-新文件名"><a href="#移动并重命名：mv-源文件的路径-文件夹-文件名-新文件的路径-文件夹-新文件名" class="headerlink" title="移动并重命名：mv 源文件的路径(文件夹+文件名) 新文件的路径(文件夹)+新文件名"></a>移动并重命名：mv 源文件的路径(文件夹+文件名) 新文件的路径(文件夹)+新文件名</h3><h3 id="直接对一个文件重命名：mv-源文件的路径-原文件夹-原文件名-原文件夹-新文件名"><a href="#直接对一个文件重命名：mv-源文件的路径-原文件夹-原文件名-原文件夹-新文件名" class="headerlink" title="直接对一个文件重命名：mv 源文件的路径(原文件夹+原文件名) 原文件夹+新文件名"></a>直接对一个文件重命名：mv 源文件的路径(原文件夹+原文件名) 原文件夹+新文件名</h3><h2 id="查看文件内容："><a href="#查看文件内容：" class="headerlink" title="查看文件内容："></a>查看文件内容：</h2><ul>
+<li>命令格式：cat 文件名<ul>
+<li>只能查看简单的文本文件，比如：js css html txt</li>
+<li>不能查看富文本，比如：图片，word、ppt、excel、xmind</li>
+</ul>
+</li>
+</ul>
+<h2 id="vi编辑器：对一些简单文本文件进行编辑操作"><a href="#vi编辑器：对一些简单文本文件进行编辑操作" class="headerlink" title="vi编辑器：对一些简单文本文件进行编辑操作"></a>vi编辑器：对一些简单文本文件进行编辑操作</h2><p>比如一些特殊的文件：ppt/excel/word/图片/xmind都是不能用记事本打开的，也就不能用vi编辑器来进行编辑</p>
+<h3 id="vi-文件路径：打开一个窗口，实现对该文件进行编辑"><a href="#vi-文件路径：打开一个窗口，实现对该文件进行编辑" class="headerlink" title="vi 文件路径：打开一个窗口，实现对该文件进行编辑"></a>vi 文件路径：打开一个窗口，实现对该文件进行编辑</h3><p>进入编辑模式：i或者a键<br>退出编辑模式：esc键</p>
+<p>如果当前不处于编辑模式，想要实现保存的功能：”:w”<br>………………….想要实现退出的功能：”:q”<br>…………………想要实现保存并退出的功能：”:wq”<br>    –&gt;ps：如果当前位于编辑模式，应该首先退出编辑模式，然后再实现保存or退出的功能</p>
+<ul>
+<li><p>如果有内容不需要保存并退出的话，建议：先退出编辑模式，然后命令:q!</p>
+<pre><code>注意：:!q是没用的
+</code></pre><p>  一旦有内容没有保存直接关闭了编辑器窗口，下次的编辑该文件进入错误页面，需要按下d键删除之前的内容</p>
+</li>
+</ul>
+<h2 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h2><ol>
+<li>已知如下目录结构：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">c/</div><div class="line">    users/</div><div class="line">        www/</div><div class="line">            ddd/</div><div class="line">                index.html</div><div class="line">    ccc/</div><div class="line">        1.txt</div><div class="line">        2.js</div><div class="line">        3.html</div><div class="line">        .project</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>假设当前位于www，要查看ccc下面的4个文件应该怎么办？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//cd ../--&gt;users下面</div><div class="line">//cd ../../--&gt;c下面</div></pre></td></tr></table></figure></p>
+<ul>
+<li>第一种方式：<br>  cd ../../ccc/<br>  ls -a</li>
+<li>第二种方式<br>  ls ../../ccc/ -a</li>
+</ul>
+<p>小练习：<br>桌面下面创建如下文件夹结构，并删除<br>app/<br>    js/<br>        1.js<br>    css/<br>        1.css<br>    html/<br>        1.html<br>    package.json</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/12/一些介绍/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/09/12/Git/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/dao.jpg"
+               alt="道可道" />
+          <p class="site-author-name" itemprop="name">道可道</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Bash命令"><span class="nav-number">1.</span> <span class="nav-text">Bash命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#shell（壳）"><span class="nav-number">1.1.</span> <span class="nav-text">shell（壳）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pwd-print-working-directory-：打印出当前目录-文件夹-路径的全名称"><span class="nav-number">1.2.</span> <span class="nav-text">pwd(print working directory)：打印出当前目录(文件夹)路径的全名称</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bash命令基本格式"><span class="nav-number">1.3.</span> <span class="nav-text">bash命令基本格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ls-list-："><span class="nav-number">1.4.</span> <span class="nav-text">ls(list)：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#和"><span class="nav-number">1.5.</span> <span class="nav-text">.和..</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cd-change-directory-切换当前位于的文件夹"><span class="nav-number">1.6.</span> <span class="nav-text">cd(change directory) 切换当前位于的文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mkdir-make-dirctory-：创建文件夹"><span class="nav-number">1.7.</span> <span class="nav-text">mkdir(make dirctory)：创建文件夹</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法格式：mkdir-文件夹名称"><span class="nav-number">1.7.1.</span> <span class="nav-text">语法格式：mkdir 文件夹名称</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除文件夹：rmdir-remove-directory-：只能删除空文件夹"><span class="nav-number">1.8.</span> <span class="nav-text">删除文件夹：rmdir(remove directory)：只能删除空文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#☆☆☆慎用☆☆☆-rm-rf-递归删除指定的文件-文件夹"><span class="nav-number">1.9.</span> <span class="nav-text">(☆☆☆慎用☆☆☆)rm -rf 递归删除指定的文件/文件夹</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#rm是删除文件"><span class="nav-number">1.9.1.</span> <span class="nav-text">rm是删除文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rm-f-如果说要删除的文件、文件夹不存在，不会显示错误信息"><span class="nav-number">1.9.2.</span> <span class="nav-text">rm -f 如果说要删除的文件、文件夹不存在，不会显示错误信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rm-r-递归删除-常用于删除空文件夹-非空文件夹"><span class="nav-number">1.9.3.</span> <span class="nav-text">rm -r 递归删除(常用于删除空文件夹/非空文件夹)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建文件"><span class="nav-number">1.10.</span> <span class="nav-text">创建文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法格式：touch-含有后缀的文件名"><span class="nav-number">1.10.1.</span> <span class="nav-text">语法格式：touch 含有后缀的文件名</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cp-copy-：复制指定的文件-文件夹"><span class="nav-number">1.11.</span> <span class="nav-text">cp(copy)：复制指定的文件/文件夹</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法格式：cp-源文件的路径-文件夹-文件名-目标文件的路径-文件夹"><span class="nav-number">1.11.1.</span> <span class="nav-text">语法格式：cp 源文件的路径(文件夹+文件名) 目标文件的路径(文件夹)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复制文件夹：cp-源文件夹路径-新文件夹路径-r"><span class="nav-number">1.11.2.</span> <span class="nav-text">复制文件夹：cp 源文件夹路径   新文件夹路径  -r</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mv-move-：移动文件-剪切-粘贴-–-gt-ctrl-x-ctrl-v"><span class="nav-number">1.12.</span> <span class="nav-text">mv(move)：移动文件(剪切+粘贴)–>ctrl x +ctrl v</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法格式：mv-源文件的路径-文件夹-文件名-新文件的路径-文件夹"><span class="nav-number">1.12.1.</span> <span class="nav-text">语法格式：mv 源文件的路径(文件夹+文件名) 新文件的路径(文件夹)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#移动并重命名：mv-源文件的路径-文件夹-文件名-新文件的路径-文件夹-新文件名"><span class="nav-number">1.12.2.</span> <span class="nav-text">移动并重命名：mv 源文件的路径(文件夹+文件名) 新文件的路径(文件夹)+新文件名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#直接对一个文件重命名：mv-源文件的路径-原文件夹-原文件名-原文件夹-新文件名"><span class="nav-number">1.12.3.</span> <span class="nav-text">直接对一个文件重命名：mv 源文件的路径(原文件夹+原文件名) 原文件夹+新文件名</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看文件内容："><span class="nav-number">1.13.</span> <span class="nav-text">查看文件内容：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vi编辑器：对一些简单文本文件进行编辑操作"><span class="nav-number">1.14.</span> <span class="nav-text">vi编辑器：对一些简单文本文件进行编辑操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#vi-文件路径：打开一个窗口，实现对该文件进行编辑"><span class="nav-number">1.14.1.</span> <span class="nav-text">vi 文件路径：打开一个窗口，实现对该文件进行编辑</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习"><span class="nav-number">1.15.</span> <span class="nav-text">练习</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">道可道</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Gemini
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+    <script type="text/javascript"
+    color="0,0,255" opacity='0.7' zIndex="6" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+</body>
+</html>
